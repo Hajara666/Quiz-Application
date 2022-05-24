@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Topics list</title>
+    </head>
+    <body>
+        <h2>Topics</h2>
+        {% for item in topics_list %}
+            <p>{{item}}</p>
+        {% endfor %}
+        <form method='POST' action='/quiz'>
+            <table style="background-color: #ccffee;">
+            <tr>
+                <td>Please enter the number of your preferred quiz</td>
+                <td><input name="QuizID" type="number" value="1"></td>
+                <td><input type="submit"> </td>
+            </tr>
+            </table>
+        </form>
+    </body>
+</html>
