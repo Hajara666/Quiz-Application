@@ -9,11 +9,41 @@
         {% for item in topics_list %}
             <p>{{item}}</p>
         {% endfor %}
-        <form method='POST' action='/quiz'>
+        <form name=" To view the quiz" method='POST' action='/quiz'>
             <table style="background-color: #ccffee;">
             <tr>
-                <td>Please enter the number of your preferred quiz</td>
+                <td> Want to see, how a quiz looks like?
+                    Then please enter the number of your preferred quiz </td>
                 <td><input name="QuizID" type="number" value="1"></td>
+                <td><input type="submit"> </td>
+            </tr>
+            </table>
+        </form>
+
+        <form name="To add a new quiz" method='POST' action='/checktopic'>
+            <table style="background-color: #ccffee;">
+            <tr>
+                <td>Want to add a new topic to the quiz list?
+                Then enter here the topic you would like to add...</td>
+                <td><input name="Quizname" type="text"></td>
+                <td><input type="submit"> </td>
+            </tr>
+            </table>
+        </form>
+        <form name="To delete a quiz" method='POST' action='/removequiz'>
+            <table style="background-color: #ccffee;">
+            <tr>
+                <td>Please enter the number of the quiz that you want to delete</td>
+                <td><input name="QuizID" type="number"></td>
+                <td><input type="submit"> </td>
+            </tr>
+            </table>
+        </form>
+        <form name="To play a quiz" method='POST' action='/play'>
+            <table style="background-color: #ccffee;">
+            <tr>
+                <td>Wanna play a quiz? Enter it's number here ! </td>
+                <td><input name="QuizID" type="number" ></td>
                 <td><input type="submit"> </td>
             </tr>
             </table>

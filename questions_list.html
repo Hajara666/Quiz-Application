@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-</html>
+
 <head>
     <title>Questions</title>
     </head>
     <body>
-        <h2>Questions</h2>
+        <h2>Questions from the quiz {{table_name}}</h2>
             <table style="background-color: #ccffee;">
-              {% for item in questions_list %}
-                   <p>{{item}}</p>
+              {% for dict_item in result %}
+                {% for key, value in dict_item.items() %}
+                <tr>
+                    <td><p>{{key}}</p></td><td><p> {{value}}</p></td>
+                </tr>
+                {% endfor %}
               {% endfor %}
-            <tr><td>
 
+            </table>
 
 
     </body>
+</html>

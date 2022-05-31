@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Topics</h2>
+        {% for item in topics_list %}
+            <p>{{item}}</p>
+        {% endfor %}
+        <form method='POST' action='/removequiz'>
+            <table style="background-color: #ccffee;">
+            <tr>
+                <td>Please enter the number of the quiz that you want to delete</td>
+                <td><input name="QuizID" type="number"></td>
+                <td><input type="submit"> </td>
+            </tr>
+            </table>
+        </form>
+</body>
+</html>

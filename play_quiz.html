@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Play the quiz</title>
+    </head>
+    <body>
+        <h2>Questions for the quiz {{table_name}}</h2>
+        {% set table_name = table_name -%}
+            <table style="background-color: #ccffee;">
+              <form method='POST' action='/checkanswers' >
+                  <input type="text" name="table_name" value={{table_name}} >
+              {% for dict_item in result %}
+                {% set answer_var = 'answer'+dict_item["QuizID"]|string -%}
+                {% for key, value in dict_item.items() %}
+                <tr>
+                    <td><p>{{key}}</p></td><td><p> {{value}}</p></td>
+                {% endfor %}
+                <tr><td>Enter the number for your answer<input name={{answer_var}} type="text" ></td></tr>
+              {% endfor %}
+                <tr><td><input type="submit"> </td></tr>
+                </tr>
+                  </form>
+            </table>
+
+
+    </body>
+</html>

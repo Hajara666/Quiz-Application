@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Add 5 questions</title>
+    </head>
+    <body>
+    <p>Add 5 questions, their answers and each 4 options to be added to the quiz {{Quizname}}</p>
+
+        <form method='POST' action='/questions'>
+            <input name="Quizname" value={{Quizname}}>
+            <input name="number" type="number" value={{number}}>
+            <table style="background-color: #ccffee;">
+            <tr><td>Please enter the details for the question {{number}}</td></tr>
+                <tr><td>Enter the question<input name="question"></td></tr>
+                <tr><td>Enter option 1<input name="option1"></td></tr>
+                <tr><td>Enter option 2<input name="option2"></td></tr>
+                <tr><td>Enter option 3<input name="option3"></td></tr>
+                <tr><td>Enter option 4<input name="option4"></td></tr>
+                <tr><td>Enter the answer<input name="answer"></td></tr>
+                <tr><td><input type="submit"> </td>
+
+            </table>
+        </form>
+    </body>
+</html>
